@@ -1,17 +1,17 @@
 class Main {
     public static void main(String[] args) {
         int account = 100;
-        int top_up1 = 100;
-        int top_up2 = 1001;
-        bonus_counter(account,top_up1);
-        bonus_counter(account,top_up2);
+        int topup1 = 100;
+        int topup2 = 1001;
+        bonuscounter(account,topup1);
+        bonuscounter(account,topup2);
     }
-    static void bonus_counter(int b , int  f ){
+    static void bonuscounter(int total , int  pay ){
         int bonus = 0;
-        if( f > 1000){
-            bonus = f / 100;
+        if( pay > 1000){
+            bonus = pay / 100;
         }
-        int account_result= b + f + bonus;
-        System.out.println("на счету = " + account_result + " количество бонусов = " +bonus);
+        int accountresult= total + pay + bonus;
+        System.out.println("на счету = " + accountresult + " количество бонусов = " + bonus);
     }
 }
